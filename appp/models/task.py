@@ -1,9 +1,9 @@
-from appp.backend.db import Basee
+from appp.backend.db import Base
 from sqlalchemy import Column, ForeignKey, Integer, String, Boolean
 from sqlalchemy.orm import relationship
 from appp.models.user import User
 
-class Task(Basee):
+class Task(Base):
     __tablename__ = "tasks"
     id = Column(Integer, primary_key=True, index=True)
     title = Column(String)
