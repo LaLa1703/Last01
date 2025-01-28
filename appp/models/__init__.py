@@ -1,9 +1,9 @@
-from appp.backend.db import *
+from appp.backend.db import Basee, engine
 from appp.models.user import User
 from appp.models.task import Task
 
 
-Base.metadata.create_all(bind=engine)
+Basee.metadata.create_all(bind=engine)
 
 from sqlalchemy.schema import CreateTable
 
