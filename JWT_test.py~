@@ -1,0 +1,18 @@
+import jwt
+import datetime
+
+SECRET_KEY = 'secret'
+
+def create_token(user_id, role: str):
+    payload = {
+        'user_id': user_id,
+        'role': role,
+        'exp': datetime.datetime.utcnow() + datetime.timedelta(hours=1)
+    }
+    #Добавляем токен в белый список
+    token = jwt.encode(payload, SECRET_KEY, algorithm='HS256')
+
+    return token
+
+def verify_token 
+
