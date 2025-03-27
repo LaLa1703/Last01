@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Результаты TF-IDF</title>
+</head>
+<body>
+    <h1>Таблица TF-IDF</h1>
+    <table border="1">
+        <tr>
+            <th>Слово</th>
+            <th>Частота</th>
+            <th>IDF</th>
+        </tr>
+        {% for word, count, idf in tfidf_data %}
+        <tr>
+            <td>{{ word }}</td>
+            <td>{{ count }}</td>
+            <td>{{ idf }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
